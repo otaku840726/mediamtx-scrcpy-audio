@@ -1,7 +1,7 @@
 # mediamtx-scrcpy-audio
 
 Just a simple personal solution, used with ws-scrcpy
-I use Flutter to write an App myself, use inappwebview to open the ws-scrcpy webpage (with viewport to improve resolution), and then use the headless (inappwebview) background to open the audio webpage
+I use Flutter to write an App myself, use inappwebview to open the [NetrisTV/ws-scrcpy][ws-scrcpy] webpage (with viewport to improve resolution), and then use the headless (inappwebview) background to open the audio webpage
 
 The following is a simple method to play mobile phone audio on the web page
 
@@ -30,3 +30,6 @@ The following is a simple method to play mobile phone audio on the web page
 4. Open the audio webpage
    First use the internal network to confirm that the audio is normal. The external network needs to enable 8189/udp to use webrtc normally.
    http://mediamtx:8889/myaudio1
+
+
+[ws-scrcpy]:https://github.com/NetrisTV/ws-scrcpy
