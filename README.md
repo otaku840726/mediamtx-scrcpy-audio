@@ -1,9 +1,11 @@
 # mediamtx-scrcpy-audio
 
-Just a simple personal solution, used with ws-scrcpy
-I use Flutter to write an App myself, use inappwebview to open the [NetrisTV/ws-scrcpy][ws-scrcpy] webpage (with viewport to improve resolution), and then use the headless (inappwebview) background to open the audio webpage
-
-The following is a simple method to play mobile phone audio on the web page
+Just a simple personal solution, used with ws-scrcpy \
+I use Flutter to write an App myself, \
+use inappwebview to open the [NetrisTV/ws-scrcpy][ws-scrcpy] webpage (with viewport to improve resolution), \
+and then use the headless (inappwebview) background to open the audio webpage \
+\
+The following is a simple method to play mobile phone audio on the web page \
 
 1. Start [bluenviron/mediamtx][mediamtx]
    ````shell
@@ -18,7 +20,7 @@ The following is a simple method to play mobile phone audio on the web page
    -p 8890:8890/udp  \
    bluenviron/mediamtx
    ````
-2. Start [Genymobile/scrcpy][scrcpy] and use ffmpeg push the audio to mediamtx
+2. Start [Genymobile/scrcpy][scrcpy] and use ffmpeg push the audio to mediamtx \
    [/config/.android] <- Used for adb authorization to avoid having to confirm every time you operate the phone
    ````shell
    docker run --name=mediamtx-scrcpy-audio \
@@ -27,8 +29,8 @@ The following is a simple method to play mobile phone audio on the web page
    --volume=./android:/config/.android:ro  \
    ghcr.io/otaku840726/mediamtx-scrcpy-audio:latest
    ````
-4. Open the audio webpage
-   First use the internal network to confirm that the audio is normal. The external network needs to enable 8189/udp to use webrtc normally.
+4. Open the audio webpage \
+   First use the internal network to confirm that the audio is normal. The external network needs to enable 8189/udp to use webrtc normally. \
    http://mediamtx:8889/myaudio1
 
 [scrcpy]:https://github.com/Genymobile/scrcpy
