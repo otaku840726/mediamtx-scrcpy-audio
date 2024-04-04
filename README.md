@@ -5,7 +5,7 @@ I use Flutter to write an App myself, \
 use inappwebview to open the [NetrisTV/ws-scrcpy][ws-scrcpy] webpage (with viewport to improve resolution), \
 and then use the headless (inappwebview) background to open the audio webpage \
 \
-The following is a simple method to play mobile phone audio on the web page \
+The following is a simple method to play mobile phone audio on the web page 
 
 1. Start [bluenviron/mediamtx][mediamtx]
    ````shell
