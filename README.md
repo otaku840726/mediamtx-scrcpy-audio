@@ -1,7 +1,7 @@
 # mediamtx-scrcpy-audio
 
 Just a simple personal solution, used with ws-scrcpy
-I use Flutter inappwebview to open the ws-scrcpy webpage, and then use the headless (inappwebview) background to open the audio webpage
+I use Flutter to write an App myself, use inappwebview to open the ws-scrcpy webpage (with viewport to improve resolution), and then use the headless (inappwebview) background to open the audio webpage
 
 1. Start mediamtx
    ````shell
