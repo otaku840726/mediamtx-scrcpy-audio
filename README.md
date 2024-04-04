@@ -18,7 +18,7 @@ The following is a simple method to play mobile phone audio on the web page
    -p 8890:8890/udp  \
    bluenviron/mediamtx
    ````
-2. Start scrcpy to push the audio to mediamtx
+2. Start [Genymobile/scrcpy][scrcpy] and use ffmpeg push the audio to mediamtx
    [/config/.android] <- Used for adb authorization to avoid having to confirm every time you operate the phone
    ````shell
    docker run --name=mediamtx-scrcpy-audio \
@@ -31,6 +31,6 @@ The following is a simple method to play mobile phone audio on the web page
    First use the internal network to confirm that the audio is normal. The external network needs to enable 8189/udp to use webrtc normally.
    http://mediamtx:8889/myaudio1
 
-
+[scrcpy]:https://github.com/Genymobile/scrcpy
 [ws-scrcpy]:https://github.com/NetrisTV/ws-scrcpy
 [mediamtx]:https://github.com/bluenviron/mediamtx
