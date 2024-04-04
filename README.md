@@ -19,10 +19,10 @@ I use Flutter inappwebview to open the ws-scrcpy webpage, and then use the headl
 2. Start scrcpy to push the audio to mediamtx
    [/config/.android] <- Used for adb authorization to avoid having to confirm every time you operate the phone
    ````shell
-   docker run --name=scrcpy5 \
-   --env=SCRCPY_IP=<手機IP:5555> \
+   docker run --name=mediamtx-scrcpy-audio \
+   --env=SCRCPY_IP=<mobile phone ip:5555> \
    --env=RTSP_SERVER=rtsp://mediamtx:8554/myaudio1 \
-   --volume=/mnt/user/appdata/scrcpy:/config/.android:ro  \
+   --volume=./android:/config/.android:ro  \
    ghcr.io/otaku840726/mediamtx-scrcpy-audio:latest
    ````
 4. Open the audio webpage
