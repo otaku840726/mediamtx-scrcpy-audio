@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+adb kill-server
+adb devices
+
+sed -i "s/SCRCPY_ARGS/$SCRCPY_ARGS/g" /config/.config/openbox/menu.xml
+sed -i "s/SCRCPY_ARGS/$SCRCPY_ARGS/g" /config/.config/openbox/autostart

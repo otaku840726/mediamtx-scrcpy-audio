@@ -1,0 +1,3 @@
+echo "entrypoint start" &
+/entrypoint.sh &
+echo "entrypoint done" &
