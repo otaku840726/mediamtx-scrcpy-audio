@@ -3,6 +3,8 @@
 Just a simple personal solution, used with ws-scrcpy
 I use Flutter to write an App myself, use inappwebview to open the ws-scrcpy webpage (with viewport to improve resolution), and then use the headless (inappwebview) background to open the audio webpage
 
+The following is a simple method to play mobile phone audio on the web page
+
 1. Start mediamtx
    ````shell
    docker run --name=mediamtx \
