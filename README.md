@@ -21,12 +21,15 @@ The following is a simple method to play mobile phone audio on the web page
    bluenviron/mediamtx
    ````
 2. Start [Genymobile/scrcpy][scrcpy] and use ffmpeg push the audio to mediamtx \
-   [/config/.android] <- Used for adb authorization to avoid having to confirm every time you operate the phone
+   [/config/.android] <- Used for adb authorization to avoid having to confirm every time you operate the phone \
+   The 3000 port is kasmVnc. I originally used this webpage to play audio, but the network usage was relatively high. \
+   kasmVNC is about 400k/s, Mediamtx webrtc is about 30k/s 
    ````shell
    docker run --name=mediamtx-scrcpy-audio \
    --env=SCRCPY_IP=<mobile phone ip:5555> \
    --env=RTSP_SERVER=rtsp://mediamtx:8554/myaudio1 \
    --volume=./android:/config/.android:ro  \
+   -p 3000:3000 \
    ghcr.io/otaku840726/mediamtx-scrcpy-audio:latest
    ````
 4. Open the audio webpage \
