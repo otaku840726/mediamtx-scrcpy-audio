@@ -22,8 +22,7 @@ The following is a simple method to play mobile phone audio on the web page
    ````
 2. Start [Genymobile/scrcpy][scrcpy] and use ffmpeg push the audio to mediamtx \
    [/config/.android] <- Used for adb authorization to avoid having to confirm every time you operate the phone \
-   The 3000 port is kasmVnc. I originally used this webpage to play audio, but the network usage was relatively high. \
-   kasmVNC is about 400k/s, Mediamtx webrtc is about 30k/s 
+   The 3000 port is kasmVnc. I originally used this webpage to play audio, but the network usage was relatively high. 
    ````shell
    docker run --name=mediamtx-scrcpy-audio \
    --env=SCRCPY_IP=<mobile phone ip:5555> \
@@ -34,7 +33,10 @@ The following is a simple method to play mobile phone audio on the web page
    ````
 4. Open the audio webpage \
    First use the internal network to confirm that the audio is normal. The external network needs to enable 8189/udp to use webrtc normally. \
-   http://mediamtx:8889/myaudio1
+   kasmVNC is about 400k/s, Mediamtx webrtc is about 30k/s \
+   But of course there will be differences in sound quality. You can also use the Docerfile to rebuild it yourself. There is bitrate/compression_level/frame_duration in root/entrypoint.sh to improve it. \
+   mediamtx-webrtc: http://mediamtx:8889/myaudio1 \
+   kasmVNC: http://mediamtx-scrcpy-audio:3000
 
 [scrcpy]:https://github.com/Genymobile/scrcpy
 [ws-scrcpy]:https://github.com/NetrisTV/ws-scrcpy
